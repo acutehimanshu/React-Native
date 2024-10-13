@@ -1,0 +1,37 @@
+ How to Create a Declaration File (abcd.d.ts)?
+
+ A declaration file in TypeScript (with the .d.ts extension) is used to describe the types of JavaScript libraries, allowing you to safely use them in a TypeScript project. These files contain type annotations for existing JavaScript code that doesn't have its types defined.
+
+
+Steps to Create and Use a Declaration File:
+
+--- step 1
+
+Create the Declaration File: Suppose you have a file called utils.js and you want to declare its types in a file called utils.d.ts.
+
+// utils.d.ts
+declare function add(a: number, b: number): number;
+declare function subtract(a: number, b: number): number;
+
+----- step 2
+
+Use the Declaration File: You can then import and use these declared types in your TypeScript file.
+
+// index.ts
+import { add, subtract } from './utils';
+
+const result1 = add(5, 3);
+const result2 = subtract(10, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+

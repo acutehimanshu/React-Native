@@ -1,0 +1,19 @@
+# How to Use the declare Keyword?
+
+The declare keyword in TypeScript is used to declare variables, functions, or modules that exist in the global scope or in external JavaScript libraries but are not present in TypeScript's type system. It lets the TypeScript compiler know about the existence of these elements without implementing them.
+
+# Declaring a Global Variable:
+> declare const VERSION: string;
+
+# Declaring a Function:
+> declare function customAlert(message: string): void; 
+
+# Declaring a Module:
+> declare module 'myLibrary' {
+    export function someFunction(value: number): string;
+  }
+
+In your TypeScript file, you can then use the declared function or variable without any implementation details.
+
+console.log(VERSION);   // Using the declared constant
+customAlert('Hello!');  // Using the declared function

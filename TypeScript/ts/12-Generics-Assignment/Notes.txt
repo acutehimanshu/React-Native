@@ -1,0 +1,60 @@
+In TypeScript, Generics (also known as templates in other languages) allow you to create reusable components that work with a variety of data types rather than a single one. This helps in writing flexible, reusable, and type-safe code. With generics, you can capture the type that a function, class, or interface should work with, and you can reuse the same logic with different types without sacrificing type safety.
+
+Why Use Generics?
+Code Reusability: Write a function or class once and use it with any type.
+Type Safety: It ensures type safety by allowing you to specify the type explicitly or infer it.
+
+How to Use Generics:
+---------------------
+Function Generics Example:
+
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output1 = identity<string>("Hello!"); // Works with strings
+let output2 = identity<number>(42);       // Works with numbers
+
+Here, T is the generic type parameter, and when we call the identity function, we can specify what T should be (like string or number).
+
+---------------------
+Generic Interface Example:
+
+interface Box<T> {
+  value: T;
+}
+
+let stringBox: Box<string> = { value: "I am a string" };
+let numberBox: Box<number> = { value: 100 };
+
+This interface Box is reusable for any type, such as string or number.
+
+
+---------------------
+Generic Classes Example:
+
+
+class DataStore<T> {
+  private data: T[] = [];
+
+  addItem(item: T) {
+    this.data.push(item);
+  }
+
+  getAll(): T[] {
+    return this.data;
+  }
+}
+
+const stringStore = new DataStore<string>();
+stringStore.addItem("Hello");
+stringStore.addItem("World");
+
+const numberStore = new DataStore<number>();
+numberStore.addItem(10);
+numberStore.addItem(20);
+
+In this example, DataStore can handle any type of data (strings, numbers, etc.).
+
+
+---------------------

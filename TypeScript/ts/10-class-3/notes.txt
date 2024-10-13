@@ -1,0 +1,13 @@
+when we write console.log before super()
+then this console will print before calling the super 
+becuase that condole.log has nothing to do with object
+
+But when you will perform any action in the super before then it will generatore error
+eg: Super must called before accessing this in the constructor for the derived class. 
+
+
+
+When we are goind method overloading
+then it should be parameter compatable 
+means return type may change but parameter must be the same. 
+that terms is called Assignable. 

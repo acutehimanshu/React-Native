@@ -1,0 +1,39 @@
+# How to Use JavaScript Code in TypeScript (e.g., Window Object)?
+
+To use standard JavaScript code (like interacting with the window object) in a TypeScript environment, you often need to declare the types explicitly to avoid type errors. Many global objects like window are already typed by TypeScript.
+
+
+## Using the window Object in TypeScript:
+TypeScript has built-in types for global objects like window, so you can interact with it directly. If you want to use a custom property on window, you must declare it.
+
+// Declare a custom property on the window object
+interface Window {
+  customValue: string;
+}
+
+// Set a custom value
+window.customValue = "This is a custom value";
+
+// Get the custom value
+console.log(window.customValue);
+In this example, we added a custom customValue property to the window object. Normally, TypeScript would not allow this unless we explicitly declare the type.
+
+
+Including JavaScript in TypeScript:
+If you want to directly use JavaScript code in a TypeScript project, you can use the declare keyword to avoid TypeScript errors for undefined types.
+
+
+// abc.js (JavaScript file)
+function showAlert() {
+  alert('Hello from JavaScript!');
+}
+
+// abcd.d.ts (TypeScript declaration file)
+declare function showAlert(): void;
+
+Now, you can use the showAlert function in your TypeScript file, even though it's defined in a JavaScript file:
+
+// index.ts
+showAlert();
+
+

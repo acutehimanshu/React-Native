@@ -1,0 +1,13 @@
+# How to Import Types / Declared Functions from a .d.ts File:
+The types or functions declared in a .d.ts file are imported just like any other module:
+
+
+// abcd.d.ts
+declare module 'myLibrary' {
+  export function someFunction(param: string): number;
+}
+
+// index.ts
+import { someFunction } from 'myLibrary';
+
+const result = someFunction('Hello');
