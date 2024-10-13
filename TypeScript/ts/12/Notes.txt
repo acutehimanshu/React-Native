@@ -1,0 +1,9 @@
+We can not use jsx in .ts files directly 
+it will create Error 
+- untermintaed regular expression lirtrals 
+
+we have to use file name tsx in place of ts to use jsx code in ts. 
+
+to use this code 
+
+> tsc --jsx react-native eg1.tsx
