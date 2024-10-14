@@ -1,0 +1,4 @@
+1) Installtion of Andriod Studio
+2) Install of expo 
+3) How to use Button, Text, ToastAndroid, View in expo
+4) install express , sample API , how to call Fetch & Assignment 

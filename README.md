@@ -12,3 +12,8 @@ npm install --global eas-cli
 
 
 npm install --global eas-cli && eas init --id 9f78eae7-bc54-44c5-811a-2683c89bd420
+
+
+watchman watch-del-all, npx expo start -c
+
+npx create-expo-app@latest StickerSmash && cd StickerSmash
